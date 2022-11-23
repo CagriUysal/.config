@@ -1,4 +1,13 @@
 local Remap = require("keymap")
+local builtin = require('telescope.builtin')
 
-Remap.nnoremap("<C-p>", "<cmd>Telescope find_files<CR>")
+-- pickers
+Remap.nnoremap("<C-p>", builtin.find_files) -- search files
+Remap.nnoremap("<leader>ff", builtin.live_grep) -- search for string (grep)
+Remap.nnoremap("<leader>fw", builtin.grep_string) -- search for word under the cursor
+Remap.nnoremap("<leader>ht", builtin.help_tags) -- search helps
+
+-- git stuff (<leader>g prefixed)
+Remap.nnoremap("<leader>gs", builtin.git_branches) -- switch to branch (lists branches)
+Remap.nnoremap("<leader>gd", builtin.git_status) -- show diff
 
