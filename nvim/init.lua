@@ -1,9 +1,9 @@
 if vim.g.vscode then
-    require('base')
-    require('remap')
+	require("base")
+	require("remap")
 else
-    require('base')
-    require('remap')
-    require('highlights')
-    require('plugins')
+	require("base")
+	require("remap")
+	require("highlights")
+	require("plugins")
 end

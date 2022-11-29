@@ -6,7 +6,7 @@ vim.opt.guicursor = ""
 
 -- relative numbers for faster j,k
 vim.opt.number = true
-vim.opt.relativenumber=true
+vim.opt.relativenumber = true
 
 -- indenting
 vim.opt.tabstop = 4
