@@ -36,8 +36,11 @@ return require("packer").startup(function(use)
 		end,
 	})
 
+	-- lua-line
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
+
+	use("tpope/vim-surround")
 end)
