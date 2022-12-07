@@ -43,6 +43,6 @@ cmp.setup({
 --- ** Language Servers **
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
--- typescript
 require("lspconfig").tsserver.setup({ on_attach = on_attach, capabilities = capabilities })
 require("lspconfig").gopls.setup({ on_attach = on_attach, capabilities = capabilities })
+require("lspconfig").cssls.setup({ on_attach = on_attach, capabilities = capabilities })
