@@ -2,7 +2,9 @@ local Remap = require("keymap")
 local builtin = require("telescope.builtin")
 
 -- pickers
-Remap.nnoremap("<C-p>", builtin.find_files) -- search files
+Remap.nnoremap("<C-p>", function()
+	builtin.find_files({ hidden = true, file_ignore_patterns = { ".git/" } })
+end) -- search files
 Remap.nnoremap("<leader>ff", builtin.live_grep) -- search for string (grep)
 Remap.nnoremap("<leader>fw", builtin.grep_string) -- search for word under the cursor
 Remap.nnoremap("<leader>ht", builtin.help_tags) -- search helps
