@@ -11,4 +11,3 @@ Remap.nnoremap("<leader>ht", builtin.help_tags) -- search helps
 
 -- git stuff (<leader>g prefixed)
 Remap.nnoremap("<leader>gs", builtin.git_branches) -- switch to branch (lists branches)
-Remap.nnoremap("<leader>gd", builtin.git_status) -- show diff
