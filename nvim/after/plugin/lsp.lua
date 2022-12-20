@@ -1,4 +1,4 @@
-local Remap = require("keymap")
+local Remap = require("utils.keymap")
 local cmp = require("cmp")
 
 -- diagnostics

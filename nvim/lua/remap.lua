@@ -1,4 +1,4 @@
-local Remap = require("keymap")
+local Remap = require("utils.keymap")
 
 Remap.nnoremap("<leader>p", "<cmd>Ex<CR>")
 Remap.nnoremap("<leader><CR>", ":so ~/.config/nvim/init.lua<CR>")
@@ -17,3 +17,7 @@ Remap.nnoremap("<C-d>", "<C-d>zz")
 Remap.nnoremap("n", "nzz")
 Remap.nnoremap("N", "Nzz")
 Remap.nnoremap("*", "*zz")
+
+-- lovely <3
+Remap.vnoremap("J", ":m '>+1<CR>gv=gv")
+Remap.vnoremap("K", ":m '<-2<CR>gv=gv")
