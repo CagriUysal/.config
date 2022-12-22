@@ -14,8 +14,6 @@ return require("packer").startup(function(use)
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-buffer")
-	use("windwp/nvim-ts-autotag")
-	use("windwp/nvim-autopairs")
 	use({
 		"jose-elias-alvarez/null-ls.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
@@ -26,6 +24,8 @@ return require("packer").startup(function(use)
 		"nvim-telescope/telescope.nvim",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
+	use("nvim-telescope/telescope-file-browser.nvim")
+	use("nvim-tree/nvim-web-devicons")
 
 	-- tree-sitter (for syntax highlighting)
 	use({
@@ -37,13 +37,15 @@ return require("packer").startup(function(use)
 	})
 
 	-- lua-line
-	use({
-		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
-	})
+	use("nvim-lualine/lualine.nvim")
 
-	use("tpope/vim-surround")
-	use("tpope/vim-commentary")
+	-- functionality
+	use("kylechui/nvim-surround")
+	use("numToStr/Comment.nvim")
+	use("ThePrimeagen/harpoon") -- <3
+	use("windwp/nvim-ts-autotag")
+	use("windwp/nvim-autopairs")
+
+	-- git
 	use("tpope/vim-fugitive")
-	use("ThePrimeagen/harpoon")
 end)
