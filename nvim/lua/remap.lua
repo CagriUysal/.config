@@ -21,3 +21,7 @@ Remap.nnoremap("*", "*zz")
 -- lovely <3
 Remap.vnoremap("J", ":m '>+1<CR>gv=gv")
 Remap.vnoremap("K", ":m '<-2<CR>gv=gv")
+
+-- quick close
+Remap.nnoremap("<leader>cc", "<cmd>cclose<CR>")
+Remap.nnoremap("<leader>oo", "<cmd>only<CR>")
