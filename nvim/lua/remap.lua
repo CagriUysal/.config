@@ -22,6 +22,8 @@ Remap.nnoremap("*", "*zz")
 Remap.vnoremap("J", ":m '>+1<CR>gv=gv")
 Remap.vnoremap("K", ":m '<-2<CR>gv=gv")
 
--- quick close
+-- quickfix
 Remap.nnoremap("<leader>cc", "<cmd>cclose<CR>")
 Remap.nnoremap("<leader>oo", "<cmd>only<CR>")
+Remap.nnoremap("<leader>k", "<cmd>cnext<CR>zz")
+Remap.nnoremap("<leader>j", "<cmd>cprev<CR>zz")
