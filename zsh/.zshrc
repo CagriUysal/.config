@@ -99,6 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vim=nvim # <3
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -109,5 +110,4 @@ path+=(/Users/cagri.uysal/Library/Android/sdk/platform-tools)
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-source ./.zsh_profile
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
