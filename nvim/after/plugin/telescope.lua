@@ -11,21 +11,10 @@ Remap.nnoremap("<leader>ff", builtin.live_grep) -- search for string (grep)
 Remap.nnoremap("<leader>fw", builtin.grep_string) -- search for word under the cursor
 Remap.nnoremap("<leader>ht", builtin.help_tags) -- search helps
 
--- git stuff (<leader>g prefixed)
--- Remap.nnoremap("<leader>gs", builtin.git_branches) -- switch to branch (lists branches)
-
--- file browser
-Remap.nnoremap("<leader>fb", function()
-	telescope.extensions.file_browser.file_browser({
-		initial_mode = "normal",
-		previewer = false,
-	})
-end)
-
-telescope.load_extension("file_browser")
+-- git stuff (<leader>g prefixed) Remap.nnoremap("<leader>gs", builtin.git_branches) -- switch to branch (lists branches)
 
 telescope.setup({
-	extentions = {
+	extensions = {
 		file_browser = {
 			path = "%:p:h",
 			cwd_to_path = true,
@@ -39,5 +28,15 @@ telescope.setup({
 		},
 	},
 })
+
+-- file browser
+Remap.nnoremap("<leader>fb", function()
+	telescope.extensions.file_browser.file_browser({
+		initial_mode = "normal",
+		previewer = false,
+	})
+end)
+
+telescope.load_extension("file_browser")
 
 dev_icons.setup({})
