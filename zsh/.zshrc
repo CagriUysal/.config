@@ -106,8 +106,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 path+=(/Users/cagri.uysal/Library/Android/sdk/platform-tools)
+path+=(~/scripts)
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+bindkey -s ^f "tmux-sessionizer\n"

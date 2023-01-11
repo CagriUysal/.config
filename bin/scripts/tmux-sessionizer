@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+if [[ $# -eq 1 ]]; then
+    target_dir=$1
+else 
+    target_dir=$(fd . ~/workspace ~/fun --max-depth=1 --type=d | fzf)
+fi
+
+if [[ -z $target_dir ]]; then
+    exit 0
+fi
+
+tmux_running=$(pgrep tmux)
+session_name=$(basename "$target_dir")
+if [[ -z $tmux_running ]]; then # tmux is not running 
+    tmux new-session -s $session_name -c $target_dir 
+    exit 0
+fi
+
+if [[ -z $TMUX ]]; then # tmux is running but not attached
+    tmux new-session -As $session_name -c $target_dir 
+    exit 0
+fi
+
+if ! tmux has-session -t=$session_name 2> /dev/null; then
+    tmux new-session -ds $session_name -c $target_dir 
+fi
+
+tmux switch -t=$session_name
