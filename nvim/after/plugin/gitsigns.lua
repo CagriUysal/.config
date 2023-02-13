@@ -4,7 +4,7 @@ local gitsigns = require("gitsigns")
 
 gitsigns.setup({
 	on_attach = function(bufnr)
-		Remap.nnoremap("<leader>hp", gitsigns.preview_hunk)
-		Remap.nnoremap("<leader>hd", gitsigns.diffthis)
+		Remap.nnoremap("<leader>gsh", gitsigns.preview_hunk)
+		Remap.nnoremap("<leader>gsd", gitsigns.diffthis)
 	end,
 })

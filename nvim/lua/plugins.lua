@@ -46,6 +46,8 @@ return require("packer").startup(function(use)
 	use("ThePrimeagen/harpoon") -- <3
 	use("windwp/nvim-ts-autotag")
 	use("windwp/nvim-autopairs")
+	use("folke/todo-comments.nvim")
+	use("ellisonleao/glow.nvim")
 
 	-- git
 	use("tpope/vim-fugitive")
