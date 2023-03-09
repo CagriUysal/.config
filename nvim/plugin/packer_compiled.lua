@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["glow.nvim"] = {
+    loaded = true,
+    path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/glow.nvim",
+    url = "https://github.com/ellisonleao/glow.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -173,6 +178,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,

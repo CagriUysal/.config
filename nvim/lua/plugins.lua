@@ -48,6 +48,7 @@ return require("packer").startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("folke/todo-comments.nvim")
 	use("ellisonleao/glow.nvim")
+	use("folke/trouble.nvim")
 
 	-- git
 	use("tpope/vim-fugitive")
