@@ -1,6 +1,6 @@
 local Remap = require("utils.keymap")
 
-Remap.nnoremap("<leader>p", "<cmd>Ex<CR>")
+-- Remap.nnoremap("<leader>p", "<cmd>Ex<CR>")
 Remap.nnoremap("<leader><CR>", ":so ~/.config/nvim/init.lua<CR>")
 
 -- evil exists

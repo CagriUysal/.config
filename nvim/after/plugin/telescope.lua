@@ -14,30 +14,4 @@ Remap.nnoremap("<leader>rr", builtin.resume) -- resume with identical state
 
 -- git stuff (<leader>g prefixed) Remap.nnoremap("<leader>gs", builtin.git_branches) -- switch to branch (lists branches)
 
-telescope.setup({
-	extensions = {
-		file_browser = {
-			path = "%:p:h",
-			cwd_to_path = true,
-			mappings = {
-				["n"] = {
-					["/"] = function()
-						vim.cmd("startinsert")
-					end,
-				},
-			},
-		},
-	},
-})
-
--- file browser
-Remap.nnoremap("<leader>fb", function()
-	telescope.extensions.file_browser.file_browser({
-		initial_mode = "normal",
-		previewer = false,
-	})
-end)
-
-telescope.load_extension("file_browser")
-
 dev_icons.setup({})
