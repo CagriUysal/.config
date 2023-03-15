@@ -9,4 +9,7 @@ lua_line.setup({
 		lualine_y = {},
 		lualine_z = { "filename" },
 	},
+	options = {
+		theme = "catppuccin",
+	},
 })

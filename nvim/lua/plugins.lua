@@ -3,6 +3,7 @@ return require("packer").startup(function(use)
 
 	-- themes
 	use("folke/tokyonight.nvim")
+	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	-- lsp
 	use("neovim/nvim-lspconfig")
@@ -39,6 +40,7 @@ return require("packer").startup(function(use)
 
 	-- lua-line
 	use("nvim-lualine/lualine.nvim")
+	use("xiyaowong/nvim-transparent")
 
 	-- functionality
 	use("kylechui/nvim-surround")
@@ -53,4 +55,5 @@ return require("packer").startup(function(use)
 	-- git
 	use("tpope/vim-fugitive")
 	use("lewis6991/gitsigns.nvim")
+	use("sindrets/diffview.nvim")
 end)
