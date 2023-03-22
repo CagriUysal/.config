@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -93,6 +98,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["diffview.nvim"] = {
+    loaded = true,
+    path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/diffview.nvim",
+    url = "https://github.com/sindrets/diffview.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -144,6 +154,16 @@ _G.packer_plugins = {
     path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/nvim-surround",
     url = "https://github.com/kylechui/nvim-surround"
   },
+  ["nvim-transparent"] = {
+    loaded = true,
+    path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/nvim-transparent",
+    url = "https://github.com/xiyaowong/nvim-transparent"
+  },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/nvim-tree/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -169,11 +189,6 @@ _G.packer_plugins = {
     path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["telescope-file-browser.nvim"] = {
-    loaded = true,
-    path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
-    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -188,6 +203,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/Users/cagri.uysal/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   ["vim-fugitive"] = {
     loaded = true,

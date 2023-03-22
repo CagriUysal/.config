@@ -4,7 +4,7 @@ local Remap = require("utils.keymap")
 Remap.nnoremap("<leader><CR>", ":so ~/.config/nvim/init.lua<CR>")
 
 -- evil exists
--- Remap.inoremap("jj", "<Esc>") -- lets try <C-[>
+Remap.inoremap("jj", "<Esc>") -- lets try <C-[>
 
 -- yank to clipboard
 Remap.vnoremap("<leader>c", '"*y')
