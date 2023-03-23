@@ -4,6 +4,7 @@ return require("packer").startup(function(use)
 	-- themes
 	use("folke/tokyonight.nvim")
 	use({ "catppuccin/nvim", as = "catppuccin" })
+	use("xiyaowong/transparent.nvim")
 
 	-- lsp
 	use("neovim/nvim-lspconfig")

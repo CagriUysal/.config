@@ -7,7 +7,9 @@ ts.setup({
 		"json",
 		"lua",
 		"javascript",
+		"typescript",
 		"go",
+		"help",
 	},
 	highlight = {
 		enable = true,

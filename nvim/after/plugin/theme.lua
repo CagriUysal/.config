@@ -1,10 +1,39 @@
+require("transparent").setup({
+	groups = { -- table: default groups
+		"Normal",
+		"NormalNC",
+		"Comment",
+		"Constant",
+		"Special",
+		"Identifier",
+		"Statement",
+		"PreProc",
+		"Type",
+		"Underlined",
+		"Todo",
+		"String",
+		"Function",
+		"Conditional",
+		"Repeat",
+		"Operator",
+		"Structure",
+		"LineNr",
+		"NonText",
+		"SignColumn",
+		"CursorLineNr",
+		"EndOfBuffer",
+	},
+	extra_groups = {}, -- table: additional groups that should be cleared
+	exclude_groups = {}, -- table: groups you don't want to clear
+})
+
 require("catppuccin").setup({
 	flavour = "mocha", -- latte, frappe, macchiato, mocha
 	background = { -- :h background
 		light = "latte",
 		dark = "mocha",
 	},
-	transparent_background = true,
+	transparent_background = vim.g.transparent_enabled,
 	show_end_of_buffer = false, -- show the '~' characters after the end of buffers
 	term_colors = false,
 	dim_inactive = {
@@ -43,5 +72,3 @@ require("catppuccin").setup({
 })
 
 vim.cmd.colorscheme("catppuccin")
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })

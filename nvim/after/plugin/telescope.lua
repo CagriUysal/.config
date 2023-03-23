@@ -7,10 +7,10 @@ local dev_icons = require("nvim-web-devicons")
 Remap.nnoremap("<C-p>", function()
 	builtin.find_files({ hidden = true, file_ignore_patterns = { ".git/" } })
 end) -- search files
-Remap.nnoremap("<leader>ff", builtin.live_grep) -- search for string (grep)
-Remap.nnoremap("<leader>fw", builtin.grep_string) -- search for word under the cursor
+Remap.nnoremap("<leader>lg", builtin.live_grep) -- search for string (grep)
+Remap.nnoremap("<leader>gs", builtin.grep_string) -- search for word under the cursor
 Remap.nnoremap("<leader>ht", builtin.help_tags) -- search helps
-Remap.nnoremap("<leader>rr", builtin.resume) -- resume with identical state
+Remap.nnoremap("<leader>re", builtin.resume) -- resume with identical state
 
 -- git stuff (<leader>g prefixed) Remap.nnoremap("<leader>gs", builtin.git_branches) -- switch to branch (lists branches)
 
