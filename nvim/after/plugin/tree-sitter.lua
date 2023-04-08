@@ -9,7 +9,7 @@ ts.setup({
 		"javascript",
 		"typescript",
 		"go",
-		"help",
+		"vimdoc",
 	},
 	highlight = {
 		enable = true,

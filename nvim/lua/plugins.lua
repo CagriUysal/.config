@@ -1,61 +1,75 @@
-return require("packer").startup(function(use)
-	use("wbthomason/packer.nvim")
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
+end
+vim.opt.rtp:prepend(lazypath)
 
+require("lazy").setup({
 	-- themes
-	use("folke/tokyonight.nvim")
-	use({ "catppuccin/nvim", as = "catppuccin" })
-	use("xiyaowong/transparent.nvim")
+	"folke/tokyonight.nvim",
+	{ "catppuccin/nvim", name = "catppuccin" },
+	"xiyaowong/transparent.nvim",
 
 	-- lsp
-	use("neovim/nvim-lspconfig")
+	"neovim/nvim-lspconfig",
 
 	-- snippet engine
-	use("L3MON4D3/LuaSnip")
+	"L3MON4D3/LuaSnip",
 
 	-- auto completion
-	use({ "williamboman/mason.nvim" })
-	use("hrsh7th/nvim-cmp")
-	use("hrsh7th/cmp-nvim-lsp")
-	use("hrsh7th/cmp-buffer")
-	use({
-		"jose-elias-alvarez/null-ls.nvim",
-		requires = { "nvim-lua/plenary.nvim" },
-	})
-	use("folke/neodev.nvim")
+	"williamboman/mason.nvim",
+	"hrsh7th/nvim-cmp",
+	"hrsh7th/cmp-nvim-lsp",
+	"hrsh7th/cmp-buffer",
 
-	-- fuzzy-finder (telescope)
-	use({
+	{
+		"jose-elias-alvarez/null-ls.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
+
+	"folke/neodev.nvim",
+
+	-- functionality
+	"kylechui/nvim-surround",
+	"numToStr/Comment.nvim",
+	"ThePrimeagen/harpoon", -- <3
+	"windwp/nvim-ts-autotag",
+	"windwp/nvim-autopairs",
+	"folke/todo-comments.nvim",
+	"ellisonleao/glow.nvim",
+	"folke/trouble.nvim",
+
+	-- fuzzy finder
+	{
 		"nvim-telescope/telescope.nvim",
-		requires = { { "nvim-lua/plenary.nvim" } },
-	})
-	use("nvim-tree/nvim-web-devicons")
-	use("nvim-tree/nvim-tree.lua")
+		dependencies = { { "nvim-lua/plenary.nvim" } },
+	},
+
+	-- git
+	"tpope/vim-fugitive",
+	"lewis6991/gitsigns.nvim",
+	"sindrets/diffview.nvim",
+
+	-- lua-line
+	"nvim-lualine/lualine.nvim",
 
 	-- tree-sitter (for syntax highlighting)
-	use({
+	{
 		"nvim-treesitter/nvim-treesitter",
-		run = function()
+		build = function()
 			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
 			ts_update()
 		end,
-	})
-	use("nvim-treesitter/nvim-treesitter-context")
+	},
+	"nvim-treesitter/nvim-treesitter-context",
 
-	-- lua-line
-	use("nvim-lualine/lualine.nvim")
-
-	-- functionality
-	use("kylechui/nvim-surround")
-	use("numToStr/Comment.nvim")
-	use("ThePrimeagen/harpoon") -- <3
-	use("windwp/nvim-ts-autotag")
-	use("windwp/nvim-autopairs")
-	use("folke/todo-comments.nvim")
-	use("ellisonleao/glow.nvim")
-	use("folke/trouble.nvim")
-
-	-- git
-	use("tpope/vim-fugitive")
-	use("lewis6991/gitsigns.nvim")
-	use("sindrets/diffview.nvim")
-end)
+	"nvim-tree/nvim-web-devicons",
+	"nvim-tree/nvim-tree.lua",
+})
