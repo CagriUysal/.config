@@ -1,20 +1,19 @@
 local lspconfig = require("lspconfig")
-local Remap = require("utils.keymap")
 local cmp = require("cmp")
 
 -- diagnostics
-Remap.nnoremap("<leader>e", vim.diagnostic.open_float)
-Remap.nnoremap("[e", vim.diagnostic.goto_prev)
-Remap.nnoremap("]e", vim.diagnostic.goto_next)
-Remap.nnoremap("<leader>q", vim.diagnostic.setloclist)
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+vim.keymap.set("n", "[e", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "]e", vim.diagnostic.goto_next)
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
 
 local on_attach = function(client, bufnr)
 	-- Mappings.
-	Remap.nnoremap("gd", vim.lsp.buf.definition)
-	Remap.nnoremap("gD", vim.lsp.buf.declaration)
-	Remap.nnoremap("<C-h>", vim.lsp.buf.hover)
-	Remap.nnoremap("gi", vim.lsp.buf.implementation)
-	Remap.nnoremap("<leader>ca", vim.lsp.buf.code_action)
+	vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+	vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
+	vim.keymap.set("n", "<C-h>", vim.lsp.buf.hover)
+	vim.keymap.set("n", "gi", vim.lsp.buf.implementation)
+	vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 end
 
 -- Auto complete

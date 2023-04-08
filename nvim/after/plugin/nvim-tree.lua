@@ -1,6 +1,5 @@
 local tree = require("nvim-tree")
 local api = require("nvim-tree.api")
-local Remap = require("utils.keymap")
 
 tree.setup({
 	respect_buf_cwd = true,
@@ -9,8 +8,8 @@ tree.setup({
 	},
 })
 
-Remap.nnoremap("<leader>p", api.tree.toggle)
-Remap.nnoremap("<leader>fp", ":NvimTreeFindFile<CR>")
+vim.keymap.set("n", "<leader>o", api.tree.toggle, { desc = "[O]pen File Tree" })
+vim.keymap.set("n", "<leader>ff", ":NvimTreeFindFile<CR>", { desc = "[F]ind [F]ile in Tree" })
 
 local function open_nvim_tree(data)
 	-- buffer is a directory

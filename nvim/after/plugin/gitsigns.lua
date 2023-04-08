@@ -1,10 +1,8 @@
-local Remap = require("utils.keymap")
-
 local gitsigns = require("gitsigns")
 
 gitsigns.setup({
-	on_attach = function(bufnr)
-		Remap.nnoremap("<leader>gsh", gitsigns.preview_hunk)
-		Remap.nnoremap("<leader>gsd", gitsigns.diffthis)
+	on_attach = function()
+		vim.keymap.set("n", "<leader>gph", gitsigns.preview_hunk, { desc = "[G]it [P]review [H]unk" })
+		vim.keymap.set("n", "<leader>gd", gitsigns.diffthis, { desc = "[G]it [D]iff" })
 	end,
 })
