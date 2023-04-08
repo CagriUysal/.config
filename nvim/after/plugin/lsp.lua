@@ -1,3 +1,4 @@
+local lspconfig = require("lspconfig")
 local Remap = require("utils.keymap")
 local cmp = require("cmp")
 
@@ -40,9 +41,24 @@ cmp.setup({
 	}),
 })
 
+require("neodev").setup({
+	-- add any options here, or leave empty to use the default settings
+})
+
 --- ** Language Servers **
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-require("lspconfig").tsserver.setup({ on_attach = on_attach, capabilities = capabilities })
-require("lspconfig").gopls.setup({ on_attach = on_attach, capabilities = capabilities })
-require("lspconfig").cssls.setup({ on_attach = on_attach, capabilities = capabilities })
+lspconfig.tsserver.setup({ on_attach = on_attach, capabilities = capabilities })
+lspconfig.gopls.setup({ on_attach = on_attach, capabilities = capabilities })
+lspconfig.cssls.setup({ on_attach = on_attach, capabilities = capabilities })
+lspconfig.lua_ls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	settings = {
+		Lua = {
+			completion = {
+				callSnippet = "Replace",
+			},
+		},
+	},
+})
