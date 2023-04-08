@@ -70,6 +70,13 @@ require("lazy").setup({
 	"nvim-tree/nvim-web-devicons",
 	"nvim-tree/nvim-tree.lua",
 
+	{
+		"folke/which-key.nvim",
+		config = function()
+			require("which-key").setup()
+		end,
+	},
+
 	-- Functionality
 	"kylechui/nvim-surround",
 	"numToStr/Comment.nvim",
