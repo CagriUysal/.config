@@ -12,64 +12,70 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	-- themes
+	-- Theme
 	"folke/tokyonight.nvim",
 	{ "catppuccin/nvim", name = "catppuccin" },
 	"xiyaowong/transparent.nvim",
 
-	-- lsp
+	-- LSP
 	"neovim/nvim-lspconfig",
+	{
+		"neovim/nvim-lspconfig",
+		dependencies = {
+			"williamboman/mason.nvim",
+			-- "williamboman/mason-lspconfig.nvim",
 
-	-- snippet engine
-	"L3MON4D3/LuaSnip",
+			-- Useful status updates for LSP
+			"j-hui/fidget.nvim",
 
-	-- auto completion
-	"williamboman/mason.nvim",
-	"hrsh7th/nvim-cmp",
-	"hrsh7th/cmp-nvim-lsp",
-	"hrsh7th/cmp-buffer",
+			-- Additional lua configuration, makes nvim stuff amazing!
+			"folke/neodev.nvim",
+		},
+	},
 
+	-- Autocompletion
+	{
+		"hrsh7th/nvim-cmp",
+		dependencies = { "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip" }, -- "saadparwaiz1/cmp_luasnip" },
+	},
+
+	-- Fuzzy Finder
+	{
+		"nvim-telescope/telescope.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
+
+	-- TODO: needed?
 	{
 		"jose-elias-alvarez/null-ls.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 
-	"folke/neodev.nvim",
+	-- Git
+	"tpope/vim-fugitive",
+	"lewis6991/gitsigns.nvim",
 
-	-- functionality
+	-- Statusline
+	"nvim-lualine/lualine.nvim",
+
+	-- Highlight, edit, and navigate code
+	{
+		"nvim-treesitter/nvim-treesitter",
+		dependencies = { "nvim-treesitter/nvim-treesitter-context" },
+		config = function()
+			pcall(require("nvim-treesitter.install").update({ with_sync = true }))
+		end,
+	},
+
+	"nvim-tree/nvim-web-devicons",
+	"nvim-tree/nvim-tree.lua",
+
+	-- Functionality
 	"kylechui/nvim-surround",
 	"numToStr/Comment.nvim",
 	"ThePrimeagen/harpoon", -- <3
 	"windwp/nvim-ts-autotag",
 	"windwp/nvim-autopairs",
 	"folke/todo-comments.nvim",
-	"ellisonleao/glow.nvim",
 	"folke/trouble.nvim",
-
-	-- fuzzy finder
-	{
-		"nvim-telescope/telescope.nvim",
-		dependencies = { { "nvim-lua/plenary.nvim" } },
-	},
-
-	-- git
-	"tpope/vim-fugitive",
-	"lewis6991/gitsigns.nvim",
-	"sindrets/diffview.nvim",
-
-	-- lua-line
-	"nvim-lualine/lualine.nvim",
-
-	-- tree-sitter (for syntax highlighting)
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = function()
-			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-			ts_update()
-		end,
-	},
-	"nvim-treesitter/nvim-treesitter-context",
-
-	"nvim-tree/nvim-web-devicons",
-	"nvim-tree/nvim-tree.lua",
 })
