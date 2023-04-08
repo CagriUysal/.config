@@ -17,14 +17,6 @@ ts.setup({
 	},
 })
 
--- auto-tag
-require("nvim-ts-autotag").setup()
-
--- auto-pair
-require("nvim-autopairs").setup({
-	disable_filetype = { "TelescopePrompt", "vim" },
-})
-
 require("treesitter-context").setup({
 	enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
 	max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.

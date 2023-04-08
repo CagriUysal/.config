@@ -31,6 +31,9 @@ require("lazy").setup({
 			-- Additional lua configuration, makes nvim stuff amazing!
 			"folke/neodev.nvim",
 		},
+		config = function()
+			require("mason").setup()
+		end,
 	},
 
 	-- Autocompletion
@@ -70,6 +73,7 @@ require("lazy").setup({
 	"nvim-tree/nvim-web-devicons",
 	"nvim-tree/nvim-tree.lua",
 
+	-- Shows possible key bindings
 	{
 		"folke/which-key.nvim",
 		config = function()
@@ -77,12 +81,56 @@ require("lazy").setup({
 		end,
 	},
 
-	-- Functionality
-	"kylechui/nvim-surround",
-	"numToStr/Comment.nvim",
-	"ThePrimeagen/harpoon", -- <3
-	"windwp/nvim-ts-autotag",
-	"windwp/nvim-autopairs",
-	"folke/todo-comments.nvim",
-	"folke/trouble.nvim",
+	-- Surround selections
+	{
+		"kylechui/nvim-surround",
+		config = function()
+			require("nvim-surround").setup()
+		end,
+	},
+
+	-- Toogle line comments
+	{
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	},
+
+	-- Highlight and search for todo comments
+	{
+		"folke/todo-comments.nvim",
+		config = function()
+			require("todo-comments").setup()
+		end,
+	},
+
+	-- A pretty list for showing lists.
+	{
+		"folke/trouble.nvim",
+		config = function()
+			require("trouble").setup()
+		end,
+	},
+
+	-- Autoclose and autorename html tag
+	{
+		"windwp/nvim-ts-autotag",
+		config = function()
+			require("nvim-ts-autotag").setup()
+		end,
+	},
+
+	-- Autopair supports multiple characters
+	{
+		"windwp/nvim-autopairs",
+		config = function()
+			require("nvim-autopairs").setup({
+				disable_filetype = { "TelescopePrompt", "vim" },
+			})
+		end,
+	},
+
+	-- <3
+	"ThePrimeagen/harpoon",
 })
