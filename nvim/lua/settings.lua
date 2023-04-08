@@ -1,34 +1,45 @@
--- leader <Space>
+-- Leader <Space>
 vim.g.mapleader = " "
 
--- cursor block
-vim.opt.guicursor = ""
-
--- relative numbers for faster j,k
-vim.opt.number = true
-vim.opt.relativenumber = true
-
--- indenting
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.smartindent = true
-
--- search
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
-
--- color
-vim.opt.termguicolors = true
-vim.opt.pumblend = 10
-
-vim.opt.title = true
-vim.opt.wrap = false
-vim.opt.scrolloff = 10
-
--- disable netrw (using nvim-tree)
+-- Disable netrw (using nvim-tree)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+-- Cursor as good old block
+vim.o.guicursor = ""
+
+-- Relative numbers for faster j,k
+vim.o.number = true
+vim.o.relativenumber = true
+
+-- Indenting
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
+vim.o.smartindent = true
+vim.o.breakindent = true
+vim.o.wrap = false
+
+-- Search
+vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.hlsearch = false
+vim.o.incsearch = true
+
+-- Color
+vim.o.termguicolors = true
+vim.o.pumblend = 10
+
+-- Decrease update time
+vim.o.timeout = true
+vim.o.timeoutlen = 300
+
+-- Set completeopt to have a better completion experience
+vim.o.completeopt = "menuone,noselect"
+
+vim.o.title = true
+vim.o.scrolloff = 10
+
+vim.o.clipboard = "unnamedplus"
+vim.wo.signcolumn = "yes"
