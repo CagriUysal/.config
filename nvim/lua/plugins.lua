@@ -23,7 +23,7 @@ require("lazy").setup({
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			"williamboman/mason.nvim",
-			-- "williamboman/mason-lspconfig.nvim",
+			"williamboman/mason-lspconfig.nvim",
 
 			-- Useful status updates for LSP
 			"j-hui/fidget.nvim",
@@ -64,7 +64,7 @@ require("lazy").setup({
 	-- Highlight, edit, and navigate code
 	{
 		"nvim-treesitter/nvim-treesitter",
-		dependencies = { "nvim-treesitter/nvim-treesitter-context" },
+		dependencies = { "nvim-treesitter/nvim-treesitter-context", "nvim-treesitter/nvim-treesitter-textobjects" },
 		config = function()
 			pcall(require("nvim-treesitter.install").update({ with_sync = true }))
 		end,
