@@ -1,5 +1,5 @@
 local gitsigns = require("gitsigns")
-local diff = require("diffview")
+local diff_view = require("diffview")
 
 gitsigns.setup({
 	on_attach = function()
@@ -12,3 +12,9 @@ gitsigns.setup({
 
 vim.keymap.set("n", "<leader>gs", "<cmd>vertical Git<CR>", { desc = "[G]it [S]tatus" })
 vim.keymap.set("n", "<leader>gm", "<cmd>Gvdiffsplit master<CR>")
+
+-- diff_view.setup({
+-- 	keymaps = {
+-- 		disable_defaults = true,
+-- 	},
+-- })

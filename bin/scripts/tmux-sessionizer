@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     target_dir=$1
 else 
-    target_dir=$(fd . ~/workspace ~/fun --max-depth=1 --type=d | fzf)
+    target_dir=$(fd . ~/workspace ~/fun ~/wiki --max-depth=1 --type=d | fzf)
 fi
 
 if [[ -z $target_dir ]]; then
