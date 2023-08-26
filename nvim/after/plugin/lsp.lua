@@ -68,6 +68,7 @@ local servers = {
 	tsserver = {},
 	cssls = {},
 	tailwindcss = {},
+	volar = {},
 	lua_ls = {
 		Lua = {
 			workspace = { checkThirdParty = false },

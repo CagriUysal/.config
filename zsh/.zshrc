@@ -107,6 +107,7 @@ export NVM_DIR="$HOME/.nvm"
 
 path+=(/Users/cagri.uysal/Library/Android/sdk/platform-tools)
 path+=(~/scripts)
+path+=(/usr/local/opt/libpq/bin)
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
