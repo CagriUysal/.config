@@ -112,6 +112,12 @@ path+=(/usr/local/opt/libpq/bin)
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+export ANDROID_HOME=~/Library/Android/sdk
+export ANDROID_SDK_ROOT=~/Library/Android/sdk
+export ANDROID_AVD_HOME=~/.android/avd
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 bindkey -s ^f "tmux-sessionizer\n"

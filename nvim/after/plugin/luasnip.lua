@@ -35,4 +35,8 @@ ls.add_snippets("all", {
 		i(2),
 		t(" }"),
 	}),
+
+	s({ trig = "vt", name = "vue template" }, {
+		t({ "<script></script>", "<template></template>", "<style></style>" }),
+	}),
 })
