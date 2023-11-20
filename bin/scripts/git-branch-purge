@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
 
-# delete every branch but `master` 
-git branch | grep -v 'master' | xargs git branch -D
-
+git branch | rg -v 'main|master' | xargs git branch -D

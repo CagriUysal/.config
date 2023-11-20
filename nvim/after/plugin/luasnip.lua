@@ -21,22 +21,26 @@ ls.add_snippets("all", {
 	}),
 
 	s({ trig = "af", name = "arrow function" }, {
-		t("("),
-		i(1, "args"),
-		t(") => { "),
-		i(2),
+		t("() => {"),
+		i(1),
 		t(" }"),
 	}),
 
 	s({ trig = "aaf", name = "async arrow function" }, {
-		t("async ("),
-		i(1, "args"),
-		t(") => { "),
-		i(2),
+		t("async () => {"),
+		i(1),
 		t(" }"),
 	}),
 
 	s({ trig = "vt", name = "vue template" }, {
 		t({ "<script></script>", "<template></template>", "<style></style>" }),
+	}),
+})
+
+ls.add_snippets("go", {
+	s({ trig = "enn", name = "error not nil" }, {
+		t("if err != nil {"),
+		i(1),
+		t(" }"),
 	}),
 })

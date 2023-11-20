@@ -121,3 +121,5 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 bindkey -s ^f "tmux-sessionizer\n"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"

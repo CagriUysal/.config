@@ -20,4 +20,7 @@ vim.keymap.set("n", "*", "*zz")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- tabs
 vim.keymap.set("n", "<leader>t", ":tabnew %<CR>")
+vim.keymap.set("n", "<C-h>", ":tabprevious<CR>")
+vim.keymap.set("n", "<C-l>", ":tabnext<CR>")
