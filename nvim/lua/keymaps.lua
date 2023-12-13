@@ -24,3 +24,5 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<leader>t", ":tabnew %<CR>")
 vim.keymap.set("n", "<C-h>", ":tabprevious<CR>")
 vim.keymap.set("n", "<C-l>", ":tabnext<CR>")
+
+vim.keymap.set("n", "<leader>yf", ":let @+ = expand('%:t')<CR>") -- yank file name

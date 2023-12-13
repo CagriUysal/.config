@@ -7,7 +7,7 @@ dev_icons.setup({})
 
 -- pickers
 vim.keymap.set("n", "<C-p>", function()
-	builtin.find_files({ hidden = true, file_ignore_patterns = { ".git/" } })
+	builtin.find_files({ hidden = true, file_ignore_patterns = { ".git/", "__snapshots__" } })
 end, { desc = "[] Search Files" })
 vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
