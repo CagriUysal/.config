@@ -43,4 +43,11 @@ ls.add_snippets("go", {
 		i(1),
 		t(" }"),
 	}),
+	s({ trig = "oki", name = "ok idiom" }, {
+		t("if value, ok := "),
+		i(1),
+		t("; ok {"),
+		i(2),
+		t(" }"),
+	}),
 })

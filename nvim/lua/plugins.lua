@@ -133,5 +133,8 @@ require("lazy").setup({
 	},
 
 	-- <3
-	"ThePrimeagen/harpoon",
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+	},
 })
