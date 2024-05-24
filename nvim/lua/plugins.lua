@@ -13,9 +13,10 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	-- Theme
-	"folke/tokyonight.nvim",
-	{ "catppuccin/nvim", name = "catppuccin" },
+	-- "folke/tokyonight.nvim",
+	-- { "catppuccin/nvim", name = "catppuccin" },
 	"xiyaowong/transparent.nvim",
+	"rebelot/kanagawa.nvim",
 
 	-- LSP
 	"neovim/nvim-lspconfig",

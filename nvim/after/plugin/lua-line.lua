@@ -10,6 +10,6 @@ lua_line.setup({
 		lualine_z = { "filename" },
 	},
 	options = {
-		theme = "catppuccin",
+		theme = "kanagawa-wave",
 	},
 })

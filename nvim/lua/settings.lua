@@ -44,3 +44,6 @@ vim.o.scrolloff = 10
 vim.o.clipboard = "unnamedplus"
 vim.wo.signcolumn = "yes"
 vim.opt.swapfile = false
+-- vim.o.cursorline = true
+
+vim.cmd("syntax sync minlines=10000")

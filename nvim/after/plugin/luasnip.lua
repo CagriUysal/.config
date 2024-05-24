@@ -50,4 +50,12 @@ ls.add_snippets("go", {
 		i(2),
 		t(" }"),
 	}),
+	s({ trig = "::", name = "declaration" }, {
+		t(":= "),
+		i(1),
+	}),
+	s({ trig = ":ra", name = "range" }, {
+		t(":= range "),
+		i(1),
+	}),
 })

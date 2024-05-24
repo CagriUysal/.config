@@ -117,9 +117,13 @@ export ANDROID_SDK_ROOT=~/Library/Android/sdk
 export ANDROID_AVD_HOME=~/.android/avd
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 bindkey -s ^f "tmux-sessionizer\n"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
